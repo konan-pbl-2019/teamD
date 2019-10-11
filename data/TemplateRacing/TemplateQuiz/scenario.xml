@@ -99,7 +99,7 @@
 			</Event>
 			<Event name="7時間" action="wrong" trans="１１問目">
 			</Event>
-			<Event name="20分" action="right" trans=１１問目">
+			<Event name="20分" action="right" trans="１１問目">
 			</Event>
 			<Event name="寝ない" action="wrong" trans="１１問目">
 			</Event>
@@ -237,7 +237,7 @@
 		</State>
 
 
-		<State name="終了" message="ゲームオーバー">
+		<State name="you win" message="congratulations">
 		</State>
 	</FSM>
 </Scenario>
