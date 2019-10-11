@@ -1,33 +1,24 @@
 package template.quiz2D;
 
 import java.awt.Color;
-import java.math.BigDecimal;
-
-
 
 import framework.RWT.RWTContainer;
 import framework.RWT.RWTFrame3D;
 import framework.RWT.RWTVirtualController;
-import framework.game2D.Sprite;
-import framework.gameMain.BaseScenarioGameContainer;
-import framework.gameMain.SimpleRolePlayingGame;
 import framework.gameMain.SimpleScenarioGame;
-import framework.model3D.ModelFactory;
-import framework.model3D.Object3D;
-import framework.model3D.Position3D;
-import framework.model3D.Quaternion3D;
 import framework.model3D.Universe;
-import framework.physics.PhysicsUtility;
 import framework.scenario.Event;
-import framework.scenario.ScenarioManager;
 import framework.scenario.ScenarioState;
 import framework.view3D.Camera3D;
 
 public class TemplateQuizGame extends SimpleScenarioGame {
 	private RWTFrame3D frame;
-	
+	public int playerHP = 100;// プレイヤーのHP宣言
+	public int enemyHP = 20;
+
+	//シナリオの初期化
 	@Override
-	public void init(Universe universe, Camera3D camera) {		
+	public void init(Universe universe, Camera3D camera) {
 		// シナリオの設定
 		setScenario("data\\TemplateQuiz\\scenario.xml");
 		container.setScenario(scenario);
@@ -37,22 +28,22 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	@Override
 	public RWTFrame3D createFrame3D() {
 		frame = new RWTFrame3D();
-		frame.setSize(1000, 800);
+		frame.setSize(1280, 720);
 		frame.setTitle("Template for 2D Quiz Game");
 		frame.setBackground(Color.BLACK);
 		return frame;
 	}
-	
+
 	@Override
 	protected RWTContainer createRWTContainer() {
 		container = new QuizGameContainer();
 		return container;
 	}
-	
+
 	@Override
 	public void progress(RWTVirtualController virtualController, long interval) {
 	}
-	
+
 	@Override
 	public void showOption(int n, String option) {
 		((QuizGameContainer)container).showOption(n, option);
@@ -60,21 +51,35 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 
 	@Override
 	public void action(String action, Event event, ScenarioState nextState) {
+
 		// シナリオ進行による世界への作用をここに書く
 		if (action.equals("right")) {
+			enemyHP -= 10;
 		} else if (action.equals("wrong")) {
+			playerHP -= 10;
 		}
+
+		if(enemyHP<=0) {
+			scenario.fire("全問正解");
+		}
+		if(playerHP<=0) {
+			scenario.fire("終了");
+		}
+
+		//debug
+		System.out.println(playerHP);
 	}
 
 	/**
 	 * ゲームのメイン
-	 * 
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		TemplateQuizGame game = new TemplateQuizGame();
-		game.setFramePolicy(5, 33, false);
-		game.start();
+		game.setFramePolicy(5, 33, false); //こいつは変えない
+		game.start(); //ゲームはじめ
+
 	}
 
 }
