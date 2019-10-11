@@ -60,14 +60,15 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 		}
 
 		if(enemyHP<=0) {
-			scenario.fire("‘S–â³‰ð");
+			System.out.println("‚ ‚È‚½‚ÌŸ‚¿");
 		}
 		if(playerHP<=0) {
-			scenario.fire("I—¹");
+			System.out.println("‚ ‚È‚½‚Ì‚Ü‚¯");
 		}
 
 		//debug
-		System.out.println(playerHP);
+		System.out.println("pHP "+playerHP);
+		System.out.println("eHP "+enemyHP);
 	}
 
 	/**
