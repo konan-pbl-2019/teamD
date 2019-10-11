@@ -20,7 +20,7 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	@Override
 	public void init(Universe universe, Camera3D camera) {
 		// シナリオの設定
-		setScenario("data\\TemplateQuiz\\scenario2.xml");
+		setScenario("data\\TemplateQuiz\\scenario.xml");
 		container.setScenario(scenario);
 		scenario.fire("開始");
 	}
