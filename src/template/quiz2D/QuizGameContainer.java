@@ -27,12 +27,12 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	public void build(GraphicsConfiguration gc) {
 		super.build(gc);
 		canvas.setRelativePosition(0.0f, 0.0f);		// 3D表示部の左上端
-		canvas.setRelativeSize(0.0f, 0.5f);		// 3D表示部のサイズ
+		canvas.setRelativeSize(0.0f, 0.5f);// 3D表示部のサイズ
 		addCanvas(canvas);
 
 		dialog.setRelativePosition(0.3f, 0.1f);	// ダイアログの左上端
-		dialog.setFont(new Font("", Font.PLAIN, 12));	// 文字のフォント
-		dialog.setColor(Color.BLACK);				// 文字の色
+		dialog.setFont(new Font("E", Font.PLAIN, 12));	// 文字のフォント
+		dialog.setColor(Color.WHITE);				// 文字の色
 		addWidget(dialog);
 
 		Font f = new Font("", Font.PLAIN, 30);
