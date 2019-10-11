@@ -20,7 +20,7 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	@Override
 	public void init(Universe universe, Camera3D camera) {
 		// シナリオの設定
-		setScenario("data\\TemplateQuiz\\scenario.xml");
+		setScenario("data\\TemplateQuiz\\scenario2.xml");
 		container.setScenario(scenario);
 		scenario.fire("開始");
 	}
@@ -60,14 +60,17 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 		}
 
 		if(enemyHP<=0) {
-			scenario.fire("全問正解");
+
+			System.out.println("敵を倒した");
 		}
 		if(playerHP<=0) {
-			scenario.fire("終了");
+			System.out.println("敵に倒された");
+
 		}
 
 		//debug
-		System.out.println(playerHP);
+		System.out.println("pHP "+playerHP);
+		System.out.println("eHP "+enemyHP);
 	}
 
 	/**

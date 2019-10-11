@@ -99,7 +99,7 @@
 			</Event>
 			<Event name="7時間" action="wrong" trans="１１問目">
 			</Event>
-			<Event name="20分" action="right" trans=１１問目">
+			<Event name="20分" action="right" trans="１１問目">
 			</Event>
 			<Event name="寝ない" action="wrong" trans="１１問目">
 			</Event>
@@ -146,7 +146,7 @@
 			</Event>
 		</State>
 		<State name="１５問目" message="大学芋や大学ノートの「大学」はどこの大学か？">
-			<Event name="早稲田大学ン" action="wrong" trans="１６問目">
+			<Event name="早稲田大学" action="wrong" trans="１６問目">
 			</Event>
 			<Event name="京都大学" action="wrong" trans="１６問目">
 			</Event>
