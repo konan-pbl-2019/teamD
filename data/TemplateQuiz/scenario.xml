@@ -239,5 +239,7 @@
 
 		<State name="終了" message="ゲームオーバー">
 		</State>
+		<State name="you win" message="congratulation">
+		</State>
 	</FSM>
 </Scenario>
