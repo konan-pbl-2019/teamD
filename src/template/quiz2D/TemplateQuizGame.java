@@ -16,6 +16,7 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	public int playerHP = 100;// プレイヤーのHP宣言
 	public int enemyHP = 20;
 
+
 	//シナリオの初期化
 	@Override
 	public void init(Universe universe, Camera3D camera) {
