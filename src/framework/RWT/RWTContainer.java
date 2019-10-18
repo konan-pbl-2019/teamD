@@ -4,20 +4,13 @@ import java.awt.AWTEvent;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.GraphicsConfiguration;
-import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-
-import javax.swing.event.MouseInputListener;
-
-
-import framework.model3D.Universe;
-
 
 /**
  * GUI部品（RWTWidget）を配置可能なコンテナ、GUI部品のアクティベーションも管理できる
- * 
+ *
  * @author 新田直也
- * 
+ *
  */
 @SuppressWarnings("serial")
 public abstract class RWTContainer extends Container {
@@ -42,13 +35,16 @@ public abstract class RWTContainer extends Container {
 	}
 
 	public void addCanvas(RWTCanvas3D cavas) {
-		if (canvases == null) canvases = new ArrayList<RWTCanvas3D>();
+		if (canvases == null)
+			canvases = new ArrayList<RWTCanvas3D>();
 		canvases.add(cavas);
 		cavas.adjust(this);
 		add(cavas.getDisplayCanvas());
 	}
 
+	//選択枠
 	public void paint(Graphics g) {
+		//super.setBackground();
 		super.paint(g);
 
 		if (canvases != null) {
@@ -68,31 +64,33 @@ public abstract class RWTContainer extends Container {
 	}
 
 	public RWTCanvas3D getPrimaryRWTCanvas3D() {
-		if (canvases == null) return null;
+		if (canvases == null)
+			return null;
 		return canvases.get(0);
 	}
-	
+
 	public int getNumberOfRWTCanvas3D() {
-		if (canvases == null) return 0;
+		if (canvases == null)
+			return 0;
 		return canvases.size();
 	}
-	
+
 	public RWTCanvas3D getRWTCanvas3D(int index) {
 		return canvases.get(index);
 	}
 
 	/**
 	 * カーソルで選べないWidgetを加えます。
-	 * 
+	 *
 	 * @param widget
 	 */
 	public void addWidget(RWTWidget widget) {
 		widgetList.add(widget);
 	}
-	
+
 	/**
 	 * カーソルで選べないWidgetを加えます。
-	 * 
+	 *
 	 * @param widget
 	 */
 	public void addWidgetOnBack(RWTWidget widget) {
@@ -101,7 +99,7 @@ public abstract class RWTContainer extends Container {
 
 	/**
 	 * 　アクティベーションを操作するマネージャーを設定する。
-	 * 
+	 *
 	 * @param manager
 	 */
 	public void setActiveManager(RWTSelectionManager manager) {
@@ -110,7 +108,7 @@ public abstract class RWTContainer extends Container {
 
 	/**
 	 * カーソルで選べるWidgetを加えます。
-	 * 
+	 *
 	 * @param w
 	 * @param n
 	 * @param m
@@ -122,7 +120,7 @@ public abstract class RWTContainer extends Container {
 
 	/**
 	 * カーソルで選べるWidgetを前面に加えます。
-	 * 
+	 *
 	 * @param w
 	 * @param n
 	 * @param m
@@ -167,14 +165,15 @@ public abstract class RWTContainer extends Container {
 	public RWTWidget getSelectedWidget() {
 		return active.getSelectedWidget();
 	}
-	
+
 	public void processEvent(AWTEvent e) {
 		// イベントを RWTFrame3D に返す
 		Container c = this.getParent();
 		while (c != null && !(c instanceof RWTFrame3D)) {
 			c = c.getParent();
 		}
-		if (c != null) ((RWTFrame3D)c).processEvent(e);
+		if (c != null)
+			((RWTFrame3D) c).processEvent(e);
 		super.processEvent(e);
 	}
 }

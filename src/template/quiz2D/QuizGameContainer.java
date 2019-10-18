@@ -62,7 +62,6 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		enemyHpBar.setSize(windowSizeX - 800, windowSizeY - 400); //確定
 		enemyHpBar.setRelativePosition(0.08f, -0.025f);
 
-
 		addWidget(questionBoard); //質問のボード表示
 
 		addWidget(playerHpBar); //プレイヤーHPの表示
@@ -113,8 +112,17 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		repaint();
 	}
 
+
+//	public void paint(Graphics g) {
+//		g.setColor(Color.red);
+//		g.fillRect(10, 10, 100, 50);
+//
+//
+//	}
+
 	public void showOption(int n, String option) {
 		optionButtons[n].setLabel(option);
+
 	}
 
 	@Override

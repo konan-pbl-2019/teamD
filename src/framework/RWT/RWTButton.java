@@ -1,14 +1,12 @@
 package framework.RWT;
-import java.awt.Color;
 import java.awt.Component;
-import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Point;
 
 /**
  * ボタンです。
  * @author Wataru
- * 
+ *
  */
 public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 	private float relativeX = 0.0f;
@@ -18,10 +16,10 @@ public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 	private int x = 0;
 	private int y = 0;
 	private int width = 0;
-	private int height = 0;	
+	private int height = 0;
 	private String label;
 
-	
+
 	public RWTButton(String s){
 		label = s;
 	}
@@ -34,27 +32,30 @@ public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 		y = (int) (sy * relativeY);
 		width = (int) (sx * relativeWidth);
 		height = (int) (sy * relativeHeight);
-		
-		
 
-		
+
+
+
 	}
 
+	//選択欄はここでいじくる
 	@Override
 	public void paint(Graphics g) {
 
+		Font font = new Font("", Font.PLAIN, 50);
 		// ログインボタンのデザイン
-		 //色の設定
-		g.setColor(Color.GRAY);
-		 //指定範囲塗りつぶし
-		g.fillRect(x+1, y+1, width, height);
-		g.setColor(Color.BLACK);
+//		 //色の設定
+//		g.setColor(Color.WHITE);
+//		 //指定範囲塗りつぶし
+//		g.fillRect(x+1, y+1, width, height);
+		//g.setColor(Color.BLACK);
 		 //指定範囲？に枠線？を描く
-		g.drawRect(x+1, y+1, width, height);
+		//g.drawRect(x+1, y+1, width, height);
 		g.setFont(font);
 		 //ボタン内に文字列をプリント
-		g.drawString(label, x+7, y+height-5);//(文字列,文字開始の左下のx座標,文字開始の左下のy座標)
-		
+		//g.drawString(label, x+7, y+height-5);//(文字列,文字開始の左下のx座標,文字開始の左下のy座標)
+		g.drawString(label, x+20, y+height-30);//(文字列,文字開始の左下のx座標,文字開始の左下のy座標)
+
 	}
 
 	@Override
@@ -99,19 +100,19 @@ public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 	@Override
 	public void deselected() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void selected() {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 	public void setLabel(String label){
 		this.label = label;
 	}
-	
+
 	public String getLabel(){
 		return label;
 	}
