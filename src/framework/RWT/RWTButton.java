@@ -1,4 +1,5 @@
 package framework.RWT;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -43,6 +44,7 @@ public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 	public void paint(Graphics g) {
 
 		Font font = new Font("", Font.PLAIN, 50);
+
 		// ログインボタンのデザイン
 //		 //色の設定
 //		g.setColor(Color.WHITE);
@@ -51,6 +53,7 @@ public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 		//g.setColor(Color.BLACK);
 		 //指定範囲？に枠線？を描く
 		//g.drawRect(x+1, y+1, width, height);
+		g.setColor(Color.white);
 		g.setFont(font);
 		 //ボタン内に文字列をプリント
 		//g.drawString(label, x+7, y+height-5);//(文字列,文字開始の左下のx座標,文字開始の左下のy座標)
