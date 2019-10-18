@@ -347,8 +347,8 @@
 			</Event>
 		</State>
 
-			</Event>
-			<State name="２８問目" message="有名な作曲家「ベートーベン」の癖はなんだったでしょう？">
+
+		<State name="２８問目" message="有名な作曲家「ベートーベン」の癖はなんだったでしょう？">
 			<Event name="目をパチパチさせる" action="wrong" trans="２９問目">
 			</Event>
 			<Event name="爪をかじる" action="wrong" trans="２９問目">
