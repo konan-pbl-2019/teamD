@@ -32,7 +32,7 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 		dialog.setRelativePosition(0.3f, 0.1f);	// ダイアログの左上端
 		dialog.setFont(new Font("E", Font.PLAIN, 12));	// 文字のフォント
-		dialog.setColor(Color.WHITE);				// 文字の色
+		dialog.setColor(Color.BLACK);				// 文字の色
 		addWidget(dialog);
 
 		Font f = new Font("", Font.PLAIN, 30);
