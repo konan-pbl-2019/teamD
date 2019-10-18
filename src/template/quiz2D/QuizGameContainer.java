@@ -35,6 +35,7 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	public void build(GraphicsConfiguration gc) {
 		super.build(gc);
 
+
 		//////////
 		//‰æ‘œ‚Ì•\Ž¦
 		//////////
