@@ -113,8 +113,6 @@
 			</Event>
 			<Event name="寝ない" action="wrong" trans="１１問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="１１問目" message="シュークリームの「シュー」の意味は？">
@@ -125,8 +123,6 @@
 			<Event name="岩" action="wrong" trans="１２問目">
 			</Event>
 			<Event name="美味しい" action="wrong" trans="１２問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -139,8 +135,6 @@
 			</Event>
 			<Event name="実はダシは出ている" action="wrong" trans="１３問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="１３問目" message="ショートケーキの「ショート」の意味は？">
@@ -151,8 +145,6 @@
 			<Event name="短い" action="wrong" trans="１４問目">
 			</Event>
 			<Event name="ふわふわした" action="wrong" trans="１４問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -165,8 +157,6 @@
 			</Event>
 			<Event name="肉をやわらかくするため" action="wrong" trans="１５問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="１５問目" message="大学芋や大学ノートの「大学」はどこの大学か？">
@@ -177,8 +167,6 @@
 			<Event name="東京大学" action="right" trans="１６問目">
 			</Event>
 			<Event name="慶応大学" action="wrong" trans="１６問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -191,8 +179,6 @@
 			</Event>
 			<Event name="時代によってかなり変化している" action="wrong" trans="１７問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="１７問目" message="三日月型とひし形のクロワッサンの違いは？">
@@ -203,8 +189,6 @@
 			<Event name="強力粉か薄力粉かの違い" action="wrong" trans="１８問目">
 			</Event>
 			<Event name="マーガリンかバターを使うかの違い" action="right" trans="１８問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -217,8 +201,6 @@
 			</Event>
 			<Event name="ヒスタミン" action="wrong" trans="１９問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="１９問目" message="昔のバターの用途とは？">
@@ -229,8 +211,6 @@
 			<Event name="鎮痛剤" action="wrong" trans="２０問目">
 			</Event>
 			<Event name="食欲増進" action="wrong" trans="２０問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -243,8 +223,6 @@
 			</Event>
 			<Event name="塩" action="wrong" trans="２１問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="２１問目" message="牡蠣に当たると症状がひどくなってしまう原因は？">
@@ -255,8 +233,6 @@
 			<Event name="牡蠣はそもそも生食用ではないため" action="wrong" trans="２２問目">
 			</Event>
 			<Event name="牡蠣自体が毒物であるため" action="wrong" trans="２２問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -269,8 +245,6 @@
 			</Event>
 			<Event name="バスケットに入れて持ち歩いたから" action="wrong" trans="２３問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 		<State name="２３問目" message="バターとマーガリンの違いとして正しいものは？">
 			<Event name="牛のミルクか山羊のミルクかの違い" action="wrong" trans="２４問目">
@@ -280,8 +254,6 @@
 			<Event name="動物性脂肪と植物性脂肪の違い" action="right" trans="２４問目">
 			</Event>
 			<Event name="生まれた国の違い" action="wrong" trans="２４問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 		<State name="２４問目" message="お酢に卵を殻ごといれると卵はどうなるでしょう？">
@@ -293,8 +265,6 @@
 			</Event>
 			<Event name="卵が石のように堅くなる" action="wrong" trans="２５問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 		<State name="２４問目" message="しゃっくりはある調味料をなめると止まります。ある調味料とはなんでしょう？">
 			<Event name="お酢" action="wrong" trans="２５問目">
@@ -305,8 +275,6 @@
 			</Event>
 			<Event name="塩" action="wrong" trans="２５問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 		<State name="２５問目" message="おぼうさんが木魚をたたく意味はなんでしょう？">
 			<Event name="お経にリズムをつけるため" action="wrong" trans="２６問目">
@@ -316,8 +284,6 @@
 			<Event name="眠くならないようにするため" action="right" trans="２６問目">
 			</Event>
 			<Event name="悪い霊を寄せ付けないため" action="wrong" trans="２６問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -330,8 +296,6 @@
 			</Event>
 			<Event name="阿波踊りみたいに踊っているように飛ぶから" action="wrong" trans="２７問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="２７問目" message="氷が長持ちする作り方はなんでしょう？">
@@ -342,8 +306,6 @@
 			<Event name="砂糖をいれた水で氷を作る" action="wrong" trans="２８問目">
 			</Event>
 			<Event name="お酢をいれた水で氷りを作る" action="wrong" trans="２８問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -357,8 +319,6 @@
 			</Event>
 			<Event name="くしゃみをしたあとに、「大魔王」という" action="wrong" trans="２９問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="２９問目" message="ドジョウは人間と同じようにあることをします。あることとはどれでしょう？">
@@ -370,8 +330,6 @@
 			</Event>
 			<Event name="くしゃみ" action="wrong" trans="３０問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="３０問目" message="豚のくるくる巻いてあるしっぽが、あるときは伸びてまっすぐになります。あるときとは、いつでしょう？">
@@ -382,8 +340,6 @@
 			<Event name="眠っている時" action="right" trans="３１問目">
 			</Event>
 			<Event name="おしっこをしている時" action="wrong" trans="３１問目">
-			</Event><Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="３１問目" message="ナメクジは塩で溶けますが、他にもある調味料で溶けます。ある調味料とはなんでしょう？">
@@ -394,8 +350,6 @@
 			<Event name="小麦粉" action="wrong" trans="３２問目">
 			</Event>
 			<Event name="片栗粉" action="wrong" trans="３２問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -408,8 +362,6 @@
 			</Event>
 			<Event name="髪の毛" action="wrong" trans="３３問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="３３問目" message="四つ葉のクローバーはあるものに形が似ているから、見つけたら「幸福・幸せ」と言われています。ある物の形とはなんでしょう？">
@@ -420,8 +372,6 @@
 			<Event name="ハート" action="wrong" trans="３４問目">
 			</Event>
 			<Event name="心臓" action="wrong" trans="３４問目">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
@@ -434,8 +384,6 @@
 			</Event>
 			<Event name="ズッキーニ" action="wrong" trans="３５問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="３５問目" message="大根おろしはあるすり方をすると、辛くなります。そのすり方とはなんでしょう？">
@@ -447,8 +395,6 @@
 			</Event>
 			<Event name="早くする" action="right" trans="３６問目">
 			</Event>
-			<Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="３６問目" message="日本で最初に販売されたアイスクリームの値段はいくらでしょう？">
@@ -459,8 +405,6 @@
 			<Event name="6000円" action="wrong" trans="３７問目">
 			</Event>
 			<Event name="8000円" action="right" trans="３７問目">
-			</Event><Event name="負け" action="" trans="終了">
-			</Event>
 		</State>
 
 		<State name="３７問目" message="臭い靴にお金を入れると臭いがなくなります。何円玉を入れるとよいでしょうか？">
@@ -471,8 +415,6 @@
 			<Event name="50円玉" action="wrong" trans="終了">
 			</Event>
 			<Event name="500円玉" action="wrong" trans="終了">
-			</Event>
-			<Event name="負け" action="" trans="終了">
 			</Event>
 		</State>
 
