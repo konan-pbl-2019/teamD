@@ -3,6 +3,7 @@
 
 package template.quiz2D;
 
+import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GraphicsConfiguration;
@@ -46,20 +47,20 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 		//質問ボード
 		RWTImage questionBoard = new RWTImage("data\\sozai\\questionBoard.png");
-		questionBoard.setSize(windowSizeX - 600, windowSizeY - 500); //確定
+		questionBoard.setSize(windowSizeX - 600, windowSizeY - 500); //変更するな
 
 		//答えのボード
 		RWTImage answerBoard = new RWTImage("data\\sozai\\answerBoard.png");
-		answerBoard.setSize(windowSizeX - 600, windowSizeY - 400); //確定
+		answerBoard.setSize(windowSizeX - 600, windowSizeY - 400); //変更するな
 
 		//HPbar プレイヤー
 		RWTImage playerHpBar = new RWTImage("data\\sozai\\playerHP.png");
-		playerHpBar.setSize(windowSizeX - 800, windowSizeY - 400); //確定
+		playerHpBar.setSize(windowSizeX - 800, windowSizeY - 400); //変更するな
 		playerHpBar.setRelativePosition(0.02f, -0.025f);
 
 		//HPbar エネミー
 		RWTImage enemyHpBar = new RWTImage("data\\sozai\\enemyHP.png");
-		enemyHpBar.setSize(windowSizeX - 800, windowSizeY - 400); //確定
+		enemyHpBar.setSize(windowSizeX - 800, windowSizeY - 400); //変更するな
 		enemyHpBar.setRelativePosition(0.08f, -0.025f);
 
 		addWidget(questionBoard); //質問のボード表示
@@ -73,8 +74,10 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 		dialog.setRelativePosition(0.3f, 0.2f); // ダイアログの左上端
 		dialog.setFont(new Font("E", Font.PLAIN, 10)); // 文字のフォント
-		dialog.setColor(Color.BLACK); // 文字の色
+		dialog.setColor(Color.white); // 文字の色
 		addWidget(dialog);
+
+
 
 		Font f = new Font("", Font.PLAIN, 30);
 		optionButtons[0] = new RWTButton("1");
@@ -109,16 +112,19 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		addWidgetOnBack(answerBoard); //答えのボード表示
 		addWidgetOnBack(backGround); //背景表示
 
+
+
+		draw(canvas);
+
 		repaint();
 	}
 
 
-//	public void paint(Graphics g) {
-//		g.setColor(Color.red);
-//		g.fillRect(10, 10, 100, 50);
-//
-//
-//	}
+	//矩形を表示しようとした
+	public void draw(Canvas cv) {
+
+	}
+
 
 	public void showOption(int n, String option) {
 		optionButtons[n].setLabel(option);
