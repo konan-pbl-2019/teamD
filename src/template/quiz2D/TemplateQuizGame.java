@@ -11,10 +11,18 @@ import framework.scenario.Event;
 import framework.scenario.ScenarioState;
 import framework.view3D.Camera3D;
 
+
+
+
+
+
+
 public class TemplateQuizGame extends SimpleScenarioGame {
 	private RWTFrame3D frame;
 	public int playerHP = 100;// プレイヤーのHP宣言
 	public int enemyHP = 20;
+
+
 
 	//シナリオの初期化
 	@Override
@@ -32,9 +40,10 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 		frame = new RWTFrame3D();
 		frame.setSize(1280, 720);
 		frame.setTitle("Template for 2D Quiz Game");
-		frame.setBackground(Color.BLACK);
+		frame.setBackground(Color.WHITE);
 		return frame;
 	}
+
 
 	@Override
 	protected RWTContainer createRWTContainer() {
