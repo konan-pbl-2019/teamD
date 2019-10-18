@@ -119,7 +119,7 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		addWidgetOnBack(backGround); //îwåiï\é¶
 
 
-		draw(g);
+		//draw(g);
 
 		repaint();
 	}

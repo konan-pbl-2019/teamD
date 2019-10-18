@@ -340,6 +340,7 @@
 			<Event name="眠っている時" action="right" trans="３１問目">
 			</Event>
 			<Event name="おしっこをしている時" action="wrong" trans="３１問目">
+			</Event>
 		</State>
 
 		<State name="３１問目" message="ナメクジは塩で溶けますが、他にもある調味料で溶けます。ある調味料とはなんでしょう？">
@@ -405,6 +406,7 @@
 			<Event name="6000円" action="wrong" trans="３７問目">
 			</Event>
 			<Event name="8000円" action="right" trans="３７問目">
+			</Event>
 		</State>
 
 		<State name="３７問目" message="臭い靴にお金を入れると臭いがなくなります。何円玉を入れるとよいでしょうか？">
