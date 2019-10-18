@@ -5,6 +5,8 @@ import java.awt.Color;
 import framework.RWT.RWTContainer;
 import framework.RWT.RWTFrame3D;
 import framework.RWT.RWTVirtualController;
+import framework.audio.BGM3D;
+import framework.audio.Sound3D;
 import framework.gameMain.SimpleScenarioGame;
 import framework.model3D.Universe;
 import framework.scenario.Event;
@@ -22,6 +24,10 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	public int playerHP = 100;// プレイヤーのHP宣言
 	public int enemyHP = 20;
 
+	//sound setting
+	Sound3D bgm=BGM3D.registerBGM("data\\otoSozai\\stories.wav");
+	Sound3D rightSE=new Sound3D("data\\otoSozai\\wave_Quiz-Correct_Answer02-1 (online-audio-converter.com).wav");
+	Sound3D wrongSE=new Sound3D("data\\otoSozai\\wav_Quiz-Wrong_Buzzer01-1 (online-audio-converter.com).wav");
 
 
 
@@ -70,8 +76,12 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 
 		// シナリオ進行による世界への作用をここに書く
 		if (action.equals("right")) {
+			rightSE.play(); //se play(volume)
+
 			enemyHP -= 10;
 		} else if (action.equals("wrong")) {
+			wrongSE.play(); //se
+
 			playerHP -= 10;
 		}
 
@@ -88,6 +98,10 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 		//debug
 		System.out.println("pHP "+playerHP);
 		System.out.println("eHP "+enemyHP);
+
+
+		//bgm play
+		BGM3D.playBGM(bgm);
 	}
 
 	/**
