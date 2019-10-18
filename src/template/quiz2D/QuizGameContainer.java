@@ -1,3 +1,6 @@
+//memo
+//OtoLogic
+
 package template.quiz2D;
 
 import java.awt.Color;
@@ -5,6 +8,7 @@ import java.awt.Font;
 import java.awt.GraphicsConfiguration;
 
 import framework.RWT.RWTButton;
+import framework.RWT.RWTImage;
 import framework.RWT.RWTVirtualController;
 import framework.RWT.RWTVirtualKey;
 import framework.RWT.RWTWidget;
@@ -34,6 +38,15 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		dialog.setFont(new Font("E", Font.PLAIN, 12));	// 文字のフォント
 		dialog.setColor(Color.BLACK);				// 文字の色
 		addWidget(dialog);
+
+
+		//tochu
+		RWTImage image = new RWTImage("data\\sozai\\questionBoard.png");
+
+		addWidget(image);
+
+
+
 
 		Font f = new Font("", Font.PLAIN, 30);
 		optionButtons[0] = new RWTButton("1");
