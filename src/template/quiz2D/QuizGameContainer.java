@@ -3,9 +3,9 @@
 
 package template.quiz2D;
 
-import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.GraphicsConfiguration;
 
 import framework.RWT.RWTButton;
@@ -25,6 +25,8 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	//画面サイズ
 	private int windowSizeX = 2516;
 	private int windowSizeY = 1440;
+
+	Graphics g;
 
 	private RWTButton[] optionButtons = new RWTButton[4];
 
@@ -63,10 +65,16 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		enemyHpBar.setSize(windowSizeX - 800, windowSizeY - 400); //変更するな
 		enemyHpBar.setRelativePosition(0.08f, -0.025f);
 
+		//エネミー
+		RWTImage enemy = new RWTImage("data\\sozai\\toka_yuusya.png");
+		enemy.setSize(500, 500); //変更するな
+		enemy.setRelativePosition(0.01f, 0.04f);
+
 		addWidget(questionBoard); //質問のボード表示
 
 		addWidget(playerHpBar); //プレイヤーHPの表示
 		addWidget(enemyHpBar); //エネミーHPの表示
+		addWidget(enemy); //エネミーHPの表示
 
 		canvas.setRelativePosition(0.0f, 0.0f); // 3D表示部の左上端
 		canvas.setRelativeSize(0.0f, 0.5f);// 3D表示部のサイズ
@@ -76,8 +84,6 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		dialog.setFont(new Font("E", Font.PLAIN, 10)); // 文字のフォント
 		dialog.setColor(Color.white); // 文字の色
 		addWidget(dialog);
-
-
 
 		Font f = new Font("", Font.PLAIN, 30);
 		optionButtons[0] = new RWTButton("1");
@@ -113,18 +119,23 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		addWidgetOnBack(backGround); //背景表示
 
 
-
-		draw(canvas);
+		draw(g);
 
 		repaint();
 	}
 
-
 	//矩形を表示しようとした
-	public void draw(Canvas cv) {
+	public void draw(Graphics g) {
+        // 矩形
+        // (x1,y1,x2,y2,paint) 左上の座標(x1,y1), 右下の座標(x2,y2)
+        //canvas.drawRect(100,200,100, 200, paint);
+		 //色の設定
+		g.setColor(Color.WHITE);
+		 //指定範囲塗りつぶし
+		g.fillRect(100, 200, 100, 200);
+		g.setColor(Color.BLACK);
 
 	}
-
 
 	public void showOption(int n, String option) {
 		optionButtons[n].setLabel(option);
