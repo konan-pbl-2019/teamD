@@ -35,65 +35,80 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	public void build(GraphicsConfiguration gc) {
 		super.build(gc);
 
+		//////////
+		//画像の表示
+		//////////
+
+		//背景
+		RWTImage backGround = new RWTImage("data\\sozai\\TSU853_yuusyanoikutewo_TP_V.jpg");
+		backGround.setSize(windowSizeX, windowSizeY);
+		backGround.setRelativePosition(0, -0.35f);
+
+		//質問ボード
+		RWTImage questionBoard = new RWTImage("data\\sozai\\questionBoard.png");
+		questionBoard.setSize(windowSizeX - 600, windowSizeY - 500); //確定
+
+		//答えのボード
+		RWTImage answerBoard = new RWTImage("data\\sozai\\answerBoard.png");
+		answerBoard.setSize(windowSizeX - 600, windowSizeY - 400); //確定
+
+		//HPbar プレイヤー
+		RWTImage playerHpBar = new RWTImage("data\\sozai\\playerHP.png");
+		playerHpBar.setSize(windowSizeX - 800, windowSizeY - 400); //確定
+		playerHpBar.setRelativePosition(0.02f, -0.025f);
+
+		//HPbar エネミー
+		RWTImage enemyHpBar = new RWTImage("data\\sozai\\enemyHP.png");
+		enemyHpBar.setSize(windowSizeX - 800, windowSizeY - 400); //確定
+		enemyHpBar.setRelativePosition(0.08f, -0.025f);
 
 
+		addWidget(questionBoard); //質問のボード表示
 
-
+		addWidget(playerHpBar); //プレイヤーHPの表示
+		addWidget(enemyHpBar); //エネミーHPの表示
 
 		canvas.setRelativePosition(0.0f, 0.0f); // 3D表示部の左上端
 		canvas.setRelativeSize(0.0f, 0.5f);// 3D表示部のサイズ
 		addCanvas(canvas);
 
-		dialog.setRelativePosition(0.3f, 0.1f); // ダイアログの左上端
-		dialog.setFont(new Font("E", Font.PLAIN, 12)); // 文字のフォント
+		dialog.setRelativePosition(0.3f, 0.2f); // ダイアログの左上端
+		dialog.setFont(new Font("E", Font.PLAIN, 10)); // 文字のフォント
 		dialog.setColor(Color.BLACK); // 文字の色
 		addWidget(dialog);
 
 		Font f = new Font("", Font.PLAIN, 30);
 		optionButtons[0] = new RWTButton("1");
 		optionButtons[0].setFont(f);
-		optionButtons[0].setRelativePosition(0.25f, 0.6f);
+		//optionButtons[0].setRelativePosition(0.25f, 0.6f);
+		optionButtons[0].setRelativePosition(0.17f, 0.67f);
 		optionButtons[0].setRelativeHeight(0.1f);
-		optionButtons[0].setRelativeWidth(0.2f);
+		optionButtons[0].setRelativeWidth(0.3f);
 		addSelectableWidget(optionButtons[0], 0, 0);
 
 		optionButtons[1] = new RWTButton("2");
 		optionButtons[1].setFont(f);
-		optionButtons[1].setRelativePosition(0.55f, 0.6f);
+		optionButtons[1].setRelativePosition(0.52f, 0.67f);
 		optionButtons[1].setRelativeHeight(0.1f);
-		optionButtons[1].setRelativeWidth(0.2f);
+		optionButtons[1].setRelativeWidth(0.3f);
 		addSelectableWidget(optionButtons[1], 1, 0);
 
 		optionButtons[2] = new RWTButton("3");
 		optionButtons[2].setFont(f);
-		optionButtons[2].setRelativePosition(0.25f, 0.8f);
+		optionButtons[2].setRelativePosition(0.17f, 0.83f);
 		optionButtons[2].setRelativeHeight(0.1f);
-		optionButtons[2].setRelativeWidth(0.2f);
+		optionButtons[2].setRelativeWidth(0.3f);
 		addSelectableWidget(optionButtons[2], 0, 1);
 
 		optionButtons[3] = new RWTButton("4");
 		optionButtons[3].setFont(f);
-		optionButtons[3].setRelativePosition(0.55f, 0.8f);
+		optionButtons[3].setRelativePosition(0.52f, 0.83f);
 		optionButtons[3].setRelativeHeight(0.1f);
-		optionButtons[3].setRelativeWidth(0.2f);
+		optionButtons[3].setRelativeWidth(0.3f);
 		addSelectableWidget(optionButtons[3], 1, 1);
 
-
-		//画像の表示
-		RWTImage backGround = new RWTImage("data\\sozai\\TSU853_yuusyanoikutewo_TP_V.jpg");
-		backGround.setSize(windowSizeX, windowSizeY);
-		backGround.setRelativePosition(0, -0.35f);
-
-		RWTImage questionBoard = new RWTImage("data\\sozai\\questionBoard.png");
-		questionBoard.setSize(windowSizeX-600, windowSizeY-500); //確定
-
-
-
-
-		addWidget(questionBoard);
-		addWidgetOnBack(backGround);
-
-
+		addWidgetOnBack(answerBoard); //答えのボード表示
+		addWidgetOnBack(backGround); //背景表示
 
 		repaint();
 	}
