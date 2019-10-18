@@ -35,7 +35,6 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	public void build(GraphicsConfiguration gc) {
 		super.build(gc);
 
-
 		//////////
 		//画像の表示
 		//////////
@@ -62,7 +61,6 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		RWTImage enemyHpBar = new RWTImage("data\\sozai\\enemyHP.png");
 		enemyHpBar.setSize(windowSizeX - 800, windowSizeY - 400); //確定
 		enemyHpBar.setRelativePosition(0.08f, -0.025f);
-
 
 		addWidget(questionBoard); //質問のボード表示
 
@@ -114,8 +112,17 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		repaint();
 	}
 
+
+//	public void paint(Graphics g) {
+//		g.setColor(Color.red);
+//		g.fillRect(10, 10, 100, 50);
+//
+//
+//	}
+
 	public void showOption(int n, String option) {
 		optionButtons[n].setLabel(option);
+
 	}
 
 	@Override
