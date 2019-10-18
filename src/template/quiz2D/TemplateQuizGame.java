@@ -24,12 +24,13 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 
 
 
+
 	//シナリオの初期化
 	@Override
 	public void init(Universe universe, Camera3D camera) {
-		
-		
-		
+
+
+
 		// シナリオの設定
 		if(enemyHP > 0 && playerHP > 0) {
 		setScenario("data\\TemplateQuiz\\scenario.xml");
@@ -66,6 +67,7 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	@Override
 	public void action(String action, Event event, ScenarioState nextState) {
 
+
 		// シナリオ進行による世界への作用をここに書く
 		if (action.equals("right")) {
 			enemyHP -= 10;
@@ -75,6 +77,8 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 
 		if(enemyHP<=0) {
 			System.out.println("あなたの勝ち");
+
+			enemyHP = 20;
 		}
 		if(playerHP<=0) {
 			System.out.println("あなたのまけ");
