@@ -27,6 +27,9 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	//シナリオの初期化
 	@Override
 	public void init(Universe universe, Camera3D camera) {
+		
+		
+		
 		// シナリオの設定
 		if(enemyHP > 0 && playerHP > 0) {
 		setScenario("data\\TemplateQuiz\\scenario.xml");
@@ -38,7 +41,7 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	@Override
 	public RWTFrame3D createFrame3D() {
 		frame = new RWTFrame3D();
-		frame.setSize(1280, 720);
+		frame.setSize(2516, 1440);
 		frame.setTitle("Template for 2D Quiz Game");
 		frame.setBackground(Color.WHITE);
 		return frame;

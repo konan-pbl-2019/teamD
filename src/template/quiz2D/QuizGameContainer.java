@@ -21,6 +21,10 @@ import framework.gameMain.BaseScenarioGameContainer;
  */
 public class QuizGameContainer extends BaseScenarioGameContainer {
 
+	//画面サイズ
+	private int windowSizeX = 2516;
+	private int windowSizeY = 1440;
+
 	private RWTButton[] optionButtons = new RWTButton[4];
 
 	public QuizGameContainer() {
@@ -30,23 +34,20 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	@Override
 	public void build(GraphicsConfiguration gc) {
 		super.build(gc);
-		canvas.setRelativePosition(0.0f, 0.0f);		// 3D表示部の左上端
+
+
+
+
+
+
+		canvas.setRelativePosition(0.0f, 0.0f); // 3D表示部の左上端
 		canvas.setRelativeSize(0.0f, 0.5f);// 3D表示部のサイズ
 		addCanvas(canvas);
 
-		dialog.setRelativePosition(0.3f, 0.1f);	// ダイアログの左上端
-		dialog.setFont(new Font("E", Font.PLAIN, 12));	// 文字のフォント
-		dialog.setColor(Color.BLACK);				// 文字の色
+		dialog.setRelativePosition(0.3f, 0.1f); // ダイアログの左上端
+		dialog.setFont(new Font("E", Font.PLAIN, 12)); // 文字のフォント
+		dialog.setColor(Color.BLACK); // 文字の色
 		addWidget(dialog);
-
-
-		//tochu
-		RWTImage image = new RWTImage("data\\sozai\\questionBoard.png");
-
-		addWidget(image);
-
-
-
 
 		Font f = new Font("", Font.PLAIN, 30);
 		optionButtons[0] = new RWTButton("1");
@@ -76,6 +77,23 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		optionButtons[3].setRelativeHeight(0.1f);
 		optionButtons[3].setRelativeWidth(0.2f);
 		addSelectableWidget(optionButtons[3], 1, 1);
+
+
+		//画像の表示
+		RWTImage backGround = new RWTImage("data\\sozai\\TSU853_yuusyanoikutewo_TP_V.jpg");
+		backGround.setSize(windowSizeX, windowSizeY);
+		backGround.setRelativePosition(0, -0.35f);
+
+		RWTImage questionBoard = new RWTImage("data\\sozai\\questionBoard.png");
+		questionBoard.setSize(windowSizeX-600, windowSizeY-500); //確定
+
+
+
+
+		addWidget(questionBoard);
+		addWidgetOnBack(backGround);
+
+
 
 		repaint();
 	}
