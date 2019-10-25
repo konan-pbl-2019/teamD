@@ -173,9 +173,9 @@
 		<State name="１６問目" message="海の水の塩辛さは変わる？">
 			<Event name="一定に保たれている" action="right" trans="１７問目">
 			</Event>
-			<Event name="だんだん塩辛くなっている" action="wrong" trans="１７問目">
+			<Event name="だんだん#塩辛くなっている" action="wrong" trans="１７問目">
 			</Event>
-			<Event name="だんだん塩辛くなくなっている" action="wrong" trans="１７問目">
+			<Event name="だんだん#塩辛くなくなっている" action="wrong" trans="１７問目">
 			</Event>
 			<Event name="時代によってかなり変化している" action="wrong" trans="１７問目">
 			</Event>
