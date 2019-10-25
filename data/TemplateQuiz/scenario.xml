@@ -43,7 +43,7 @@
 			</Event>
 			<Event name="テンションがハイだから" action="wrong" trans="５問目">
 			</Event>
-			<Event name="ジャックという名前が多かったから" action="right" trans="５問目">
+			<Event name="ジャックという名前が#多かったから" action="right" trans="５問目">
 			</Event>
 			<Event name="高い金銭を要求するから" action="wrong" trans="５問目">
 			</Event>
