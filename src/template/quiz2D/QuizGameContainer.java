@@ -325,6 +325,10 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 	}
 
+	//**************************
+
+
+	//*****画面表示関連*****//
 	//ゲームオーバーの表示
 	public void retire() {
 		gameover.setVisible(true);
@@ -344,4 +348,5 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		enemy2.setVisible(true);
 	}
 
+	//*****************************:
 }
