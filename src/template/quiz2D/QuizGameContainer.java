@@ -27,6 +27,8 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	private int windowSizeX = 2516;
 	private int windowSizeY = 1440;
 
+
+
 	//	private RWTImage playerHpBar = new RWTImage("data\\sozai\\playerHPBar.png");
 	//	private RWTImage enemyHpBar = new RWTImage("data\\sozai\\enemyHPBar.png");
 
@@ -34,17 +36,18 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 	//	Graphics g;
 
+	//HPバー関連
 	private RWTBar playerHpBar = new RWTBar(100, 100);
 	private RWTBar enemyHpBar = new RWTBar(100, 100);
 
 	// enemy
-	RWTImage enemy1 = new RWTImage("data\\sozai\\animalSinger.png");
-	RWTImage enemy2 = new RWTImage("data\\sozai\\heisei.png");
+	RWTImage enemy1 = new RWTImage("data\\sozai\\animalSinger.png"); //一人目
+	RWTImage enemy2 = new RWTImage("data\\sozai\\heisei.png"); //二人目
 
 	//gameover
 	private RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
 	//gameclear
-		private RWTImage gameClear = new RWTImage("data\\sozai\\GameClear.png");
+	private RWTImage gameClear = new RWTImage("data\\sozai\\GameClear.png");
 
 	private RWTButton[] optionButtons = new RWTButton[4];
 
@@ -70,9 +73,9 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	public void build(GraphicsConfiguration gc) {
 		super.build(gc);
 
-		//////////
-		// 画像の表示
-		//////////
+		////////////////
+		// 画像の表示///
+		////////////////
 
 		// 背景
 		RWTImage backGround = new RWTImage("data\\sozai\\TSU853_yuusyanoikutewo_TP_V.jpg");
@@ -194,8 +197,8 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		addWidgetOnBack(answerBoard); // 答えのボード表示
 		addWidgetOnBack(backGround); // 背景表示
 
-		addWidget(playerHpBar); //
-		addWidget(enemyHpBar);
+		addWidget(playerHpBar); //プレイヤーHPバー表示
+		addWidget(enemyHpBar); //敵HPバー表示
 		addWidget(playerHp); // プレイヤーHPの表示
 		addWidget(enemyHp); // enemy HPの表示
 
@@ -312,6 +315,7 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	}
 
 	//*****HPバー関連*****
+	//プレイヤーのHP表示
 	public void playerHPShow(int HPValue) {
 
 		playerHpBar.setValue(HPValue);
@@ -319,15 +323,14 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 	}
 
+	//敵のHP表示
 	public void enmeyHPShow(int HPValue) {
 		enemyHpBar.setValue(HPValue);
 		System.out.println("ehp :" + HPValue);
 
 	}
 
-
 	//**************************
-
 
 	//*****画面表示関連*****//
 	//ゲームオーバーの表示
@@ -337,14 +340,12 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	}
 
 	//gameclear の画面
-	public void gameClearShow()
-	{
+	public void gameClearShow() {
 		gameClear.setVisible(true);
 	}
 
 	//次の敵表示と前の敵を消す
-	public void nextEnemy()
-	{
+	public void nextEnemy() {
 		enemy1.setVisible(false);
 		enemy2.setVisible(true);
 	}
