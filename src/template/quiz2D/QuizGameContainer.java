@@ -27,7 +27,8 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	private int windowSizeX = 2516;
 	private int windowSizeY = 1440;
 
-//	private RWTImage playerpBar = new RWTImage("data\\sozai\\enemyHPBar.png");
+//	private RWTImage playerHpBar = new RWTImage("data\\sozai\\playerHPBar.png");
+//	private RWTImage enemyHpBar = new RWTImage("data\\sozai\\enemyHPBar.png");
 
 //	private int playerHpStatus = 100, enemyHpStatus = 100;
 
@@ -108,9 +109,9 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 		addWidget(questionBoard); // 質問のボード表示
 
-		addWidget(playerHp); // プレイヤーHPの表示
+//		addWidget(playerHp); // プレイヤーHPの表示
 //		addWidget(playerHpBar); // プレイヤーHPの表示
-		addWidget(enemyHp); // enemy HPの表示
+//		addWidget(enemyHp); // enemy HPの表示
 //		addWidget(enemyHpBar); // enemy HPの表示
 
 //		// HP draws
@@ -165,12 +166,18 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		addWidgetOnBack(backGround); // 背景表示
 
 		playerHpBar.setColor(Color.GREEN);
-		playerHpBar.setRelativePosition(0.5f, 0.5f);
-		enemyHpBar.setColor(Color.red);
-		playerHpBar.setRelativePosition(0.5f, 0.5f);
+		playerHpBar.setRelativePosition(0.084f, 0.525f);
+		playerHpBar.setRelativeSize(0.265f, 0.05f);
+
+		enemyHpBar.setColor(Color.blue);
+		enemyHpBar.setRelativePosition(0.584f, 0.525f);
+		enemyHpBar.setRelativeSize(0.265f, 0.05f);
 
 		addWidget(playerHpBar); //
 		addWidget(enemyHpBar);
+
+		addWidget(playerHp); // プレイヤーHPの表示
+		addWidget(enemyHp); // enemy HPの表示
 
 		//ようわからん
 //		RWTBar bar = new RWTBar(100, 100);
