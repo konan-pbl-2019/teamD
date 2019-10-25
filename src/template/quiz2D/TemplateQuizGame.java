@@ -67,8 +67,7 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 		// シナリオ進行による世界への作用をここに書く
 //		QuizGameContainer qgc = new QuizGameContainer();
 //		qgc.HP(playerHP, enemyHP);
-		((QuizGameContainer) container).playerHPShow(playerHP);
-		((QuizGameContainer) container).enmeyHPShow(enemyHP);
+
 
 
 
@@ -91,6 +90,9 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 			System.out.println("あなたのまけ");
 			scenario.fire("負け");
 		}
+
+		((QuizGameContainer) container).playerHPShow(playerHP);
+		((QuizGameContainer) container).enmeyHPShow(enemyHP);
 
 		// debug
 //		System.out.println("pHP "+playerHP);
