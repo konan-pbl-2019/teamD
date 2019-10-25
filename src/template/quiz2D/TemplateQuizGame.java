@@ -15,8 +15,8 @@ import framework.view3D.Camera3D;
 
 public class TemplateQuizGame extends SimpleScenarioGame {
 	private RWTFrame3D frame;
-	private int playerHP=50;// プレイヤーのHP宣言
-	private int enemyHP=20;
+	private int playerHP=100;// プレイヤーのHP宣言
+	private int enemyHP=100;
 
 
 	// sound setting
