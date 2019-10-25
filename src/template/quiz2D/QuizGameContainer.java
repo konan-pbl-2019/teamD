@@ -287,14 +287,14 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	public void playerHPShow(int HPValue)
 	{
 
-		enemyHpBar.setValue(HPValue);
+		playerHpBar.setValue(HPValue);
 		System.out.println("php :"+HPValue);
 
 	}
 	public void enmeyHPShow(int HPValue)
 	{
-		playerHpBar.setValue(HPValue);
-		System.out.println("php :"+HPValue);
+		enemyHpBar.setValue(HPValue);
+		System.out.println("ehp :"+HPValue);
 
 	}
 
