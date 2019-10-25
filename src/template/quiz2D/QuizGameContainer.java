@@ -37,6 +37,9 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	private RWTBar playerHpBar = new RWTBar(100, 100);
 	private RWTBar enemyHpBar = new RWTBar(100, 100);
 
+	//gameover
+	private RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
+
 	private RWTButton[] optionButtons = new RWTButton[4];
 
 	public QuizGameContainer() {
@@ -191,7 +194,9 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		// draw(g);
 
 		//gameover
-		RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
+		//RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
+		gameover.setSize(2000, 1200);
+		gameover.setVisible(false);
 		addWidget(gameover);
 
 
@@ -305,8 +310,7 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	}
 
 	public void retire() {
-
-
+		gameover.setVisible(true);
 
 	}
 
