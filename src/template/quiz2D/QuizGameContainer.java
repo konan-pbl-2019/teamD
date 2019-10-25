@@ -72,7 +72,8 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 		// 質問ボード
 		RWTImage questionBoard = new RWTImage("data\\sozai\\questionBoard.png");
-		questionBoard.setSize(windowSizeX - 600, windowSizeY - 500); // 変更するな
+		questionBoard.setRelativePosition(-0.02f, 0f);
+		questionBoard.setSize(windowSizeX - 500, windowSizeY - 500); // 変更するな
 
 		// 答えのボード
 		RWTImage answerBoard = new RWTImage("data\\sozai\\answerBoard.png");
@@ -102,10 +103,14 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		//		enemyHpBar.setSize(5 * TemplateQuizGame.enemyHP, 200); // 変更するな
 		//		enemyHpBar.setRelativePosition(0.678f, 0.52f);
 
-		// エネミー
+		// player
 		RWTImage player = new RWTImage("data\\sozai\\toka_yuusya.png");
 		player.setSize(500, 500); // 変更するな
 		player.setRelativePosition(0.01f, 0.04f);
+		// enemy
+		RWTImage enemy1 = new RWTImage("data\\sozai\\heisei.png");
+		enemy1.setSize(450, 450); // 変更するな
+		enemy1.setRelativePosition(0.775f, 0.07f);
 
 		addWidget(questionBoard); // 質問のボード表示
 
@@ -129,13 +134,14 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		//		addWidget(enemyHpBar); // enemy HPの表示
 
 		addWidget(player); // playerの表示
+		addWidget(enemy1); //enemy1
 
 		canvas.setRelativePosition(0.0f, 0.0f); // 3D表示部の左上端
 		canvas.setRelativeSize(0.0f, 0.5f);// 3D表示部のサイズ
 		addCanvas(canvas);
 
-		dialog.setRelativePosition(0.3f, 0.2f); // ダイアログの左上端
-		dialog.setFont(new Font("E", Font.PLAIN, 10)); // 文字のフォント
+		dialog.setRelativePosition(0.265f, 0.2f); // ダイアログの左上端
+		dialog.setFont(new Font("E", Font.PLAIN, 9)); // 文字のフォント
 		dialog.setColor(Color.white); // 文字の色
 		addWidget(dialog);
 
@@ -177,13 +183,17 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		addWidget(playerHp); // プレイヤーHPの表示
 		addWidget(enemyHp); // enemy HPの表示
 
-
 		//ようわからん-> わかった(^▽^)/
 		//		RWTBar bar = new RWTBar(100, 100);
 		//		bar.setColor(Color.blue);
 
 		//HP(playerHpStatus,enemyHpStatus);
 		// draw(g);
+
+		//gameover
+		RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
+		addWidget(gameover);
+
 
 		repaint();
 
@@ -291,6 +301,12 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	public void enmeyHPShow(int HPValue) {
 		enemyHpBar.setValue(HPValue);
 		System.out.println("ehp :" + HPValue);
+
+	}
+
+	public void retire() {
+
+
 
 	}
 
