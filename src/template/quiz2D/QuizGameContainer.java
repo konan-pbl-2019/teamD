@@ -5,7 +5,6 @@ package template.quiz2D;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.GraphicsConfiguration;
 
 import framework.RWT.RWTBar;
@@ -18,7 +17,7 @@ import framework.gameMain.BaseScenarioGameContainer;
 
 /**
  * クイズゲーム用画面
- * 
+ *
  * @author Nitta
  *
  */
@@ -28,12 +27,14 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	private int windowSizeX = 2516;
 	private int windowSizeY = 1440;
 
-	private RWTImage playerHpBar = new RWTImage("data\\sozai\\playerHPBar.png");
-	private RWTImage enemyHpBar = new RWTImage("data\\sozai\\enemyHPBar.png");
+//	private RWTImage playerpBar = new RWTImage("data\\sozai\\enemyHPBar.png");
 
 //	private int playerHpStatus = 100, enemyHpStatus = 100;
 
 //	Graphics g;
+
+	private RWTBar playerHpBar = new RWTBar(100, 100);
+	private RWTBar enemyHpBar = new RWTBar(100, 100);
 
 	private RWTButton[] optionButtons = new RWTButton[4];
 
@@ -45,11 +46,11 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 //	public void HPSet(int nowPlayerHpStatus,int nowEnemyHpStatus) {
 //		playerHpStatus = nowPlayerHpStatus;
 //		enemyHpStatus = nowEnemyHpStatus;
-//		
+//
 //
 ////		addWidget(playerHpBar); // プレイヤーHPの表示
 ////		addWidget(enemyHpBar); // enemy HPの表示
-//		
+//
 ////		System.out.println("php "+playerHpStatus);
 ////		System.out.println("ehp "+enemyHpStatus);
 //
@@ -81,24 +82,24 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		playerHp.setSize(windowSizeX - 740, windowSizeY - 400); // 変更するな
 		playerHp.setRelativePosition(0.02f, -0.025f);
 
-//		// HP プレイヤー
-		RWTImage playerHpBar = new RWTImage("data\\sozai\\playerHPBar.png");
-//		playerHpBar.setSize(500, 200); // 変更するな
+////		// HP プレイヤー
+//		RWTImage playerHpBar = new RWTImage("data\\sozai\\playerHPBar.png");
+////		playerHpBar.setSize(500, 200); // 変更するな
+////		playerHpBar.setRelativePosition(0.085f, 0.52f);
+//		playerHpBar.setSize(5 * TemplateQuizGame.playerHP, 200); // 変更するな
 //		playerHpBar.setRelativePosition(0.085f, 0.52f);
-		playerHpBar.setSize(5 * TemplateQuizGame.playerHP, 200); // 変更するな
-		playerHpBar.setRelativePosition(0.085f, 0.52f);
 
 		// HPbar エネミー
 		RWTImage enemyHp = new RWTImage("data\\sozai\\enemyHP.png");
 		enemyHp.setSize(windowSizeX - 740, windowSizeY - 400); // 変更するな
 		enemyHp.setRelativePosition(0.08f, -0.025f);
 
-//		// HP エネミー
-		RWTImage enemyHpBar = new RWTImage("data\\sozai\\enemyHPBar.png");
-//		enemyHpBar.setSize(500, 200); // 変更するな
+////		// HP エネミー
+//		RWTImage enemyHpBar = new RWTImage("data\\sozai\\enemyHPBar.png");
+////		enemyHpBar.setSize(500, 200); // 変更するな
+////		enemyHpBar.setRelativePosition(0.678f, 0.52f);
+//		enemyHpBar.setSize(5 * TemplateQuizGame.enemyHP, 200); // 変更するな
 //		enemyHpBar.setRelativePosition(0.678f, 0.52f);
-		enemyHpBar.setSize(5 * TemplateQuizGame.enemyHP, 200); // 変更するな
-		enemyHpBar.setRelativePosition(0.678f, 0.52f);
 
 		// エネミー
 		RWTImage player = new RWTImage("data\\sozai\\toka_yuusya.png");
@@ -118,12 +119,12 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 		addWidget(player); // playerの表示
 
-		
+
 		canvas.setRelativePosition(0.0f, 0.0f); // 3D表示部の左上端
 		canvas.setRelativeSize(0.0f, 0.5f);// 3D表示部のサイズ
 		addCanvas(canvas);
-		
-		
+
+
 
 		dialog.setRelativePosition(0.3f, 0.2f); // ダイアログの左上端
 		dialog.setFont(new Font("E", Font.PLAIN, 10)); // 文字のフォント
@@ -162,30 +163,35 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 		addWidgetOnBack(answerBoard); // 答えのボード表示
 		addWidgetOnBack(backGround); // 背景表示
-		
-		addWidget(playerHpBar); // プレイヤーHPの表示
-		addWidget(enemyHpBar); // enemy HPの表示
-		
+
+		playerHpBar.setColor(Color.GREEN);
+		playerHpBar.setRelativePosition(0.5f, 0.5f);
+		enemyHpBar.setColor(Color.red);
+		playerHpBar.setRelativePosition(0.5f, 0.5f);
+
+		addWidget(playerHpBar); //
+		addWidget(enemyHpBar);
+
 		//ようわからん
 //		RWTBar bar = new RWTBar(100, 100);
 //		bar.setColor(Color.blue);
 
 		//HP(playerHpStatus,enemyHpStatus);
 		// draw(g);
-		
-		
+
+
 
 		repaint();
-		
+
 		//debug
-		System.out.println(TemplateQuizGame.playerHP+" "+TemplateQuizGame.enemyHP);
-		
+//		System.out.println(TemplateQuizGame.playerHP+" "+TemplateQuizGame.enemyHP);
+
 	}
 
 	/*// max player HP is 100. enemyHP too.
 	public void HP(int playerHP, int enemyHP) {
-		
-		
+
+
 		// HP プレイヤー
 		// RWTImage playerHpBar = new RWTImage("data\\sozai\\playerHPBar.png");
 		playerHpBar.setSize(5 * playerHP, 200); // 変更するな
@@ -199,14 +205,14 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		//System.out.println("OK");
 
 		System.out.println(playerHP+" "+ enemyHP);
-		
-		
-		
+
+
+
 		addWidget(playerHpBar); // プレイヤーHPの表示
 		addWidget(enemyHpBar); // enemy HPの表示
-		
-		
-		
+
+
+
 		try {
 			System.out.println("実行");
 			repaint();
@@ -215,10 +221,10 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
+
 //		playerHpBar.repaint();
-		
+
 
 	}
 */
@@ -269,12 +275,20 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	@Override
 	public void keyTyped(RWTVirtualKey key) {
 	}
-	
-	
-	public static void draw()
+
+
+	public void playerHPShow(int HPValue)
 	{
-		System.out.println(TemplateQuizGame.playerHP+" "+TemplateQuizGame.enemyHP);
-		
+
+		enemyHpBar.setValue(HPValue);
+		System.out.println("php :"+HPValue);
+
 	}
-	
+	public void enmeyHPShow(int HPValue)
+	{
+		playerHpBar.setValue(HPValue);
+		System.out.println("php :"+HPValue);
+
+	}
+
 }

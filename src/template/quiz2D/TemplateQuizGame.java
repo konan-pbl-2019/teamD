@@ -15,8 +15,9 @@ import framework.view3D.Camera3D;
 
 public class TemplateQuizGame extends SimpleScenarioGame {
 	private RWTFrame3D frame;
-	public static int playerHP=50;// プレイヤーのHP宣言
-	public static int enemyHP=20;
+	private int playerHP=50;// プレイヤーのHP宣言
+	private int enemyHP=20;
+
 
 	// sound setting
 	Sound3D bgm = BGM3D.registerBGM("data\\otoSozai\\stories.wav");
@@ -66,8 +67,10 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 		// シナリオ進行による世界への作用をここに書く
 //		QuizGameContainer qgc = new QuizGameContainer();
 //		qgc.HP(playerHP, enemyHP);
-		
-		QuizGameContainer.draw();
+		((QuizGameContainer) container).playerHPShow(playerHP);
+		((QuizGameContainer) container).enmeyHPShow(enemyHP);
+
+
 
 		if (action.equals("right")) {
 			rightSE.play(); // se play(volume)
