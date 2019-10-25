@@ -18,6 +18,8 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	private int playerHP=100;// ƒvƒŒƒCƒ„[‚ÌHPéŒ¾
 	private int enemyHP=100;
 
+	private int enemyBeatNumber=0;
+
 
 
 	// sound setting
@@ -87,6 +89,11 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 			enemyHP = 100;
 			((QuizGameContainer) container).nextEnemy();
 
+			enemyBeatNumber++;
+			if(enemyBeatNumber>=2)
+			{
+				((QuizGameContainer) container).gameClearShow();
+			}
 //			scenario.fire("you win");
 		}
 		if (playerHP <= 0) {
