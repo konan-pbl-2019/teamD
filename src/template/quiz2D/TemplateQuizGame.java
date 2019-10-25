@@ -4,6 +4,7 @@ import java.awt.Color;
 
 import framework.RWT.RWTContainer;
 import framework.RWT.RWTFrame3D;
+import framework.RWT.RWTImage;
 import framework.RWT.RWTVirtualController;
 import framework.audio.BGM3D;
 import framework.audio.Sound3D;
@@ -23,6 +24,9 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	private RWTFrame3D frame;
 	public int playerHP = 100;// ÉvÉåÉCÉÑÅ[ÇÃHPêÈåæ
 	public int enemyHP = 20;
+
+	private int windowSizeX = 2516;
+	private int windowSizeY = 1440;
 
 	//sound setting
 	Sound3D bgm=BGM3D.registerBGM("data\\otoSozai\\stories.wav");
@@ -93,6 +97,13 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 		if(playerHP<=0) {
 			System.out.println("Ç†Ç»ÇΩÇÃÇ‹ÇØ");
 			scenario.fire("ïâÇØ");
+
+			// âÊñ ÇÃè„èëÇ´
+			RWTImage GameOver = new RWTImage("data\\sozai\\GameOver.png");
+			GameOver.setSize(windowSizeX , windowSizeY);
+			GameOver.setRelativePosition(0.0f, 0.0f);
+
+			//addWidget(GameOver);
 		}
 
 		//debug
