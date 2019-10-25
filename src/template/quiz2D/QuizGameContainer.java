@@ -44,7 +44,7 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	//gameover
 	private RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
 	//gameclear
-		//private RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
+		private RWTImage gameClear = new RWTImage("data\\sozai\\GameClear.png");
 
 	private RWTButton[] optionButtons = new RWTButton[4];
 
@@ -212,6 +212,10 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		gameover.setVisible(false);
 		addWidget(gameover);
 
+		gameClear.setSize(2000, 1200);
+		gameClear.setVisible(false);
+		addWidget(gameClear);
+
 		repaint();
 
 		//debug
@@ -321,11 +325,19 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 	}
 
+	//ゲームオーバーの表示
 	public void retire() {
 		gameover.setVisible(true);
 
 	}
 
+	//gameclear の画面
+	public void gameClearShow()
+	{
+		gameClear.setVisible(true);
+	}
+
+	//次の敵表示と前の敵を消す
 	public void nextEnemy()
 	{
 		enemy1.setVisible(false);
