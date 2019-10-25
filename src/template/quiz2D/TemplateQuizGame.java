@@ -88,7 +88,9 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 		}
 		if (playerHP <= 0) {
 			System.out.println("‚ ‚È‚½‚Ì‚Ü‚¯");
-			scenario.fire("•‰‚¯");
+			scenario.go("I—¹");
+
+			((QuizGameContainer) container).retire();
 		}
 
 		((QuizGameContainer) container).playerHPShow(playerHP);
