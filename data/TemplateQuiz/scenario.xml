@@ -188,7 +188,7 @@
 			</Event>
 			<Event name="強力粉か薄力粉かの違い" action="wrong" trans="１８問目">
 			</Event>
-			<Event name="マーガリンかバターを使うかの違い" action="right" trans="１８問目">
+			<Event name="マーガリンか#バターを使うかの違い" action="right" trans="１８問目">
 			</Event>
 		</State>
 
@@ -228,9 +228,9 @@
 		<State name="２１問目" message="牡蠣に当たると症状がひどくなってしまう原因は？">
 			<Event name="牡蠣が傷みやすいため" action="wrong" trans="２２問目">
 			</Event>
-			<Event name="牡蠣がノロウイルスを蓄積しているため" action="right" trans="２２問目">
+			<Event name="牡蠣がノロウイルスを#蓄積しているため" action="right" trans="２２問目">
 			</Event>
-			<Event name="牡蠣はそもそも生食用ではないため" action="wrong" trans="２２問目">
+			<Event name="牡蠣はそもそも#生食用ではないため" action="wrong" trans="２２問目">
 			</Event>
 			<Event name="牡蠣自体が毒物であるため" action="wrong" trans="２２問目">
 			</Event>
@@ -247,11 +247,11 @@
 			</Event>
 		</State>
 		<State name="２３問目" message="バターとマーガリンの違いとして正しいものは？">
-			<Event name="牛のミルクか山羊のミルクかの違い" action="wrong" trans="２４問目">
+			<Event name="牛のミルクか#山羊のミルクかの違い" action="wrong" trans="２４問目">
 			</Event>
 			<Event name="塩味（えんみ）の違い" action="wrong" trans="２４問目">
 			</Event>
-			<Event name="動物性脂肪と植物性脂肪の違い" action="right" trans="２４問目">
+			<Event name="動物性脂肪と#植物性脂肪の違い" action="right" trans="２４問目">
 			</Event>
 			<Event name="生まれた国の違い" action="wrong" trans="２４問目">
 			</Event>
@@ -279,7 +279,7 @@
 		<State name="２５問目" message="おぼうさんが木魚をたたく意味はなんでしょう？">
 			<Event name="お経にリズムをつけるため" action="wrong" trans="２６問目">
 			</Event>
-			<Event name="亡くなった人が天国にいけるようにと祈るため" action="wrong" trans="２６問目">
+			<Event name="亡くなった人が#天国にいけるようにと祈るため" action="wrong" trans="２６問目">
 			</Event>
 			<Event name="眠くならないようにするため" action="right" trans="２６問目">
 			</Event>
@@ -292,9 +292,9 @@
 			</Event>
 			<Event name="人間にすぐつかまるから" action="right" trans="２７問目">
 			</Event>
-			<Event name="アホみたいな顔をしているから" action="wrong" trans="２７問目">
+			<Event name="アホみたいな#顔をしているから" action="wrong" trans="２７問目">
 			</Event>
-			<Event name="阿波踊りみたいに踊っているように飛ぶから" action="wrong" trans="２７問目">
+			<Event name="阿波踊りみたいに#踊っているように飛ぶから" action="wrong" trans="２７問目">
 			</Event>
 		</State>
 
@@ -317,7 +317,7 @@
 			</Event>
 			<Event name="念入りに手を洗う" action="right" trans="２９問目">
 			</Event>
-			<Event name="くしゃみをしたあとに、「大魔王」という" action="wrong" trans="２９問目">
+			<Event name="くしゃみをしたあとに、#「大魔王」という" action="wrong" trans="２９問目">
 			</Event>
 		</State>
 
