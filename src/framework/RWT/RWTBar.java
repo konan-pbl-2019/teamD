@@ -8,16 +8,16 @@ import java.awt.Graphics;
 public class RWTBar extends RWTWidget {
 	int max;
 	int value;
-	
+
 	private float relativeX = 0.05f;
 	private float relativeY = 0.02f;
 	private float relativeWidth = 0.90f;
 	private float relativeHeight = 0.05f;
-	
+
 	private int x = 0;
 	private int y = 0;
 	private int width = 0;
-	private int height = 0;	
+	private int height = 0;
 
 	public RWTBar(int max, int value){
 		this.max=max;
@@ -50,23 +50,32 @@ public class RWTBar extends RWTWidget {
 		height = (int) (sy * relativeHeight);
 
 	}
-	
+
+	//色を調整するメソッドっす
+	private Color col=Color.GREEN; //初期色はgreen
+	public void setColor(Color c)
+	{
+		col = c;
+	}
+
 	@Override
 	public void paint(Graphics g) {
-		g.setColor(Color.DARK_GRAY);
-		g.drawRect(x, y, width, height);
-		g.setColor(Color.GREEN);
+		//g.setColor(Color.DARK_GRAY);
+		//g.drawRect(x, y, width, height);
+		g.setColor(col);
 		g.fillRect(x+1, y+1, (width-1)*value/max, height-1);
-		g.setColor(color.RED);
-		g.fillRect(((width-1)*value/max)+x, y+1, width - (width-1)*value/max, height-1);
-		
+		//g.setColor(color.RED);
+		//g.fillRect(((width-1)*value/max)+x, y+1, width - (width-1)*value/max, height-1);
+
 	}
-	
+
+
+
 	public void setValue(int y){
 		value = y;
 //		repaint();
 	}
-	
+
 	public int getValue(){
 		return value;
 	}
