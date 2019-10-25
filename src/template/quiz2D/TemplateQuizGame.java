@@ -83,6 +83,7 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 
 		if (enemyHP <= 0) {
 			System.out.println("‚ ‚È‚½‚ÌŸ‚¿");
+			enemyHP = 100;
 
 //			scenario.fire("you win");
 		}
