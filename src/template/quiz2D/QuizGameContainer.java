@@ -38,11 +38,13 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	private RWTBar enemyHpBar = new RWTBar(100, 100);
 
 	// enemy
-	RWTImage enemy1 = new RWTImage("data\\sozai\\animal_music_band_singer.pn");
+	RWTImage enemy1 = new RWTImage("data\\sozai\\animalSinger.png");
 	RWTImage enemy2 = new RWTImage("data\\sozai\\heisei.png");
 
 	//gameover
 	private RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
+	//gameclear
+		//private RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
 
 	private RWTButton[] optionButtons = new RWTButton[4];
 

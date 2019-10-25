@@ -19,6 +19,7 @@ public class TemplateQuizGame extends SimpleScenarioGame {
 	private int enemyHP=100;
 
 
+
 	// sound setting
 	Sound3D bgm = BGM3D.registerBGM("data\\otoSozai\\stories.wav");
 	Sound3D rightSE = new Sound3D("data\\otoSozai\\wave_Quiz-Correct_Answer02-1 (online-audio-converter.com).wav");
