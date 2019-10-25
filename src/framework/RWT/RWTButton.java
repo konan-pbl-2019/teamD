@@ -2,6 +2,7 @@ package framework.RWT;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Graphics;
 
 /**
@@ -23,6 +24,7 @@ public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 
 	public RWTButton(String s){
 		label = s;
+		setString(s);
 	}
 
 	@Override
@@ -33,10 +35,6 @@ public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 		y = (int) (sy * relativeY);
 		width = (int) (sx * relativeWidth);
 		height = (int) (sy * relativeHeight);
-
-
-
-
 	}
 
 	//選択欄はここでいじくる
@@ -57,7 +55,16 @@ public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 		g.setFont(font);
 		 //ボタン内に文字列をプリント
 		//g.drawString(label, x+7, y+height-5);//(文字列,文字開始の左下のx座標,文字開始の左下のy座標)
-		g.drawString(label, x+20, y+height-30);//(文字列,文字開始の左下のx座標,文字開始の左下のy座標)
+		FontMetrics fm = g.getFontMetrics(font);
+		int fh = fm.getHeight();
+		int lineY = 0;
+		for(int i = 0; i < strings.length; i++){
+			if (strings[i] != null && strings[i].length() > 0) {
+				g.drawString(strings[i], x + 20, y + height - 30 + lineY);
+			}
+			lineY += fh;
+		}
+//		g.drawString(label, x+20, y+height-30);//(文字列,文字開始の左下のx座標,文字開始の左下のy座標)
 
 	}
 
@@ -114,6 +121,7 @@ public class RWTButton extends RWTLabel implements RWTSelectableWidget {
 
 	public void setLabel(String label){
 		this.label = label;
+		setString(label);
 	}
 
 	public String getLabel(){
