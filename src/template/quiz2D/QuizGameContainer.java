@@ -37,6 +37,13 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	private RWTBar playerHpBar = new RWTBar(100, 100);
 	private RWTBar enemyHpBar = new RWTBar(100, 100);
 
+	// enemy
+	RWTImage enemy1 = new RWTImage("data\\sozai\\animal_music_band_singer.pn");
+	RWTImage enemy2 = new RWTImage("data\\sozai\\heisei.png");
+
+	//gameover
+	private RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
+
 	private RWTButton[] optionButtons = new RWTButton[4];
 
 	public QuizGameContainer() {
@@ -107,10 +114,15 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		RWTImage player = new RWTImage("data\\sozai\\toka_yuusya.png");
 		player.setSize(500, 500); // 変更するな
 		player.setRelativePosition(0.01f, 0.04f);
-		// enemy
-		RWTImage enemy1 = new RWTImage("data\\sozai\\heisei.png");
+
+		//enemy
 		enemy1.setSize(450, 450); // 変更するな
 		enemy1.setRelativePosition(0.775f, 0.07f);
+
+		//enemy
+		enemy2.setSize(450, 450); // 変更するな
+		enemy2.setRelativePosition(0.775f, 0.07f);
+		enemy2.setVisible(false);
 
 		addWidget(questionBoard); // 質問のボード表示
 
@@ -135,6 +147,8 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 
 		addWidget(player); // playerの表示
 		addWidget(enemy1); //enemy1
+
+		addWidget(enemy2);//enemy2
 
 		canvas.setRelativePosition(0.0f, 0.0f); // 3D表示部の左上端
 		canvas.setRelativeSize(0.0f, 0.5f);// 3D表示部のサイズ
@@ -191,9 +205,10 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 		// draw(g);
 
 		//gameover
-		RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
+		//RWTImage gameover = new RWTImage("data\\sozai\\GameOver.png");
+		gameover.setSize(2000, 1200);
+		gameover.setVisible(false);
 		addWidget(gameover);
-
 
 		repaint();
 
@@ -305,9 +320,14 @@ public class QuizGameContainer extends BaseScenarioGameContainer {
 	}
 
 	public void retire() {
+		gameover.setVisible(true);
 
+	}
 
-
+	public void nextEnemy()
+	{
+		enemy1.setVisible(false);
+		enemy2.setVisible(true);
 	}
 
 }
